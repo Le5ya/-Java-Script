@@ -43,4 +43,4 @@ mission = 1000000;
 
 let budgetDay;
 budgetDay=4000;
-console.log('Доход за день:  '+budgetDay/30,'остаток: '+ budgetDay%30)
+console.log('Доход за день:  '+budgetDay/30,'остаток: '+ budgetDay%30);
