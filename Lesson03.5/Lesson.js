@@ -12,17 +12,22 @@ let lang;
 // }
 //Второй способ
 
- switch(lang){
+ /*switch(lang){
   case 'ru':
       alert(A);
     break ; 
     case 'en':
       alert(B);
-}
+}*/
  //Третий способ
-//(lang ='en') ? (alert(B)):(alert(A));
+var x = (lang =='en') ? (alert(B)):(alert(A)); 
 
+//Задание 2
 
+let namePerson;
+namePerson=prompt('Имя?', ' ')
+var y = (namePerson == "Артём")? 'Директор' :(namePerson=="Максим")? 'преподаватель':'студент';  
 
+alert(y);
 
 
