@@ -45,3 +45,4 @@ let budgetDay;
 budgetDay=4000;
 console.log('Доход за день:  '+budgetDay/30,'остаток: '+ budgetDay%30);
 
+lesson 04;
