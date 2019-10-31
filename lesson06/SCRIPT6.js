@@ -30,21 +30,23 @@
     let addExpenses = prompt("Перечислите возможные расходы за считываемый период через запятую", " , " );
     appData.addExpenses = addExpenses.toLowerCase().split(',');
     appData.appData.deposit = confirm('Есть ли у вас депозит в банке?'); 
-      
-     // getExpensesMonth: function(){
-let sum = 0;
-  for (let i = 0; i < 2; i++){
-    if(i===0){
-     let expenses1 = prompt('Какие обязательные ежемесячные расходы у вас есть?','Квартплата   ');
-    }
-    if (i===1){
-    let expenses2 = prompt('Какие обязательные ежемесячные расходы у вас есть?','Corbina   ');
-    }
-
-    sum += +prompt ('Во сколько это обойдётся?', 100);
-  }
-    return sum;
+       for (let i = 0; i<2; i++){
+            let itemExpenses = prompt('Введите обязательную статью расходов.','Cадик');
+            let cashExpenses;
+            do {
+              cashExpenses = prompt('Во сколько это обойдётся?', 2500);
+            }
+            while (isNaN(cashExpenses) || cashExpenses===''|| cashExpenses===nul);
+            add.expences[itemExpenses] = cashExpenses;
+            }  
       },
+          getExpensesMonth: function (){
+            for (let key in appData.addExpenses) {
+              appData.expensesMonth +=appData.expences[key];
+            }
+          },
+     
+
       getBudget: function(){
 
       },
@@ -63,8 +65,17 @@ let sum = 0;
         let addExpenses = prompt("Перечислите возможные расходы за считываемый период через запятую", " , " );
             appData.addExpenses = addExpenses.toLowerCase().split(',');
             appData.deposit = confirm('Есть ли у вас депозит в банке?'); 
-      };
-        asking();
+            for (let i = 0; i<2; i++){
+            let itemExpenses = prompt('Введите обязательную статью расходов.','Cадик');
+            let cashExpenses;
+            do {
+              cashExpenses = prompt('Во сколько это обойдётся?', 2500);
+            }
+            while (isNaN(cashExpenses) || cashExpenses===''|| cashExpenses===nul);
+            add.expences[itemExpenses] = cashExpenses;
+            }  
+      }
+       // asking();
 
 
 
