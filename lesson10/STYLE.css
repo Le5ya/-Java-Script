@@ -1,0 +1,10 @@
+.button {
+	
+	width:1000px;
+	height: 200px;
+	border: 10px;
+	border: solid;
+	color: blue;
+	font-size: 20px;
+	font-style: italic;
+}
