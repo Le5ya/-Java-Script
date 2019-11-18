@@ -1,18 +1,12 @@
-    let money 
-        
-       
-     start = function() {
-        
-       do{
-        money = prompt('Ваш месячный доход?','  ')-0;
-        console.log('money:', money);
-        console.log(typeof money);
-      }
-       while(isNaN(money) || money === ''|| money === null);
-    };
-    start();
 
-      appData = {
+     
+   
+     
+  let appData = {
+      budget: 0,
+      budgetDay: 0,
+      budgetMonth: 0,
+      expensesMonth: 0,
       income: {},
       addincome: [],
       expenses: {
@@ -25,10 +19,21 @@
       moneyDeposit: 0,
       mission: 50000,
       period: 10,
-      budget: money,
-      budgetDay: 0,
-      budgetMonth: 0,
-      expensesMonth: 0,
+      start: function() {
+        
+       if(salaryAmount.value ==='') {
+       	alert('Ошибка, поле "Месячный доход" должно быть заполнено');
+       	return;
+       }              
+
+       appData.budget = salaryAmount.value;
+       console.log('salaryAmount.value: ', salaryAmount.value);
+       // appData.asking();
+        //appData.getExpensesMonth();
+        //appData.getBudget();
+    },
+
+      
       asking: function(){
 
         if(confirm('Есть ли у вас дополнительный источник доходов?')){
@@ -120,13 +125,12 @@
       calcSaveMoney: function(){
         return appData.budgetMonth*appData.period;
       }
-       }; 
+       };
+         start.addEventListener('click', appData.start);
 
-          appData.asking();
-          appData.getExpensesMonth();
-          appData.getBudget();
+         
           
-          console.log('Расходы за месяц:  '+appData.expensesMonth);
+          
 
           if (appData.getTargetMonth()>0) {
           console.log('Цель будет достигнута в течение ' +Math.ceil(appData.getTargetMonth()) 
@@ -134,12 +138,10 @@
           } else {
             console.log('Не в этой жизни');
           }
-          console.log(appData.getStatusIncome());
+         
 
           for(let key in appData) {
             console.log('Программа содержит данные: '+ key + '_' +appData[key]);
           }
           appData.getInfoDeposit();
          // console.log(appData.percentDeposit, appData.moneyDeposit, appData.calcSaveMoney());
-
-   

@@ -1,4 +1,26 @@
-    let money 
+ /* 
+           let logStr = "";
+           let sep = ", ";
+           //console.log(addExpenses)
+           // addExpenses и appData.addExpenses - это две разные вещи
+           for (let i = appData.addExpenses){
+              // trim() удаляет пробелы слева и справа
+              let CurrentExpense = appData.addExpenses[i].trim();
+              if (CurrentExpense != ""){
+                  //console.log(CurrentExpense[0].toUpperCase())
+                  //CurrentExpense[0] = CurrentExpense[0].toUpperCase();
+                  // JS не позволяет заменить элемент строки =(
+
+                  // A.slice(k, m) - возвращает массив, состоящий из элементов A с k-го по m-ый
+                  CurrentExpense = CurrentExpense[0].toUpperCase() + 
+                                    CurrentExpense.slice(1,CurrentExpense.length);
+              }
+              logStr += CurrentExpense;
+              if (i != appData.addExpenses.length - 1){
+                // Не добавляем разделитель к последнему элеементу
+                logStr += sep;
+              }
+                 console.log('Расходы:'+logStr);*/    let money 
         
        
      start = function() {
@@ -240,7 +262,29 @@ const targetMonth = getTargetMonth(mission, accumulatedMonth);
 
 
 
+ /* 
+           let logStr = "";
+           let sep = ", ";
+           //console.log(addExpenses)
+           // addExpenses и appData.addExpenses - это две разные вещи
+           for (let i = appData.addExpenses){
+              // trim() удаляет пробелы слева и справа
+              let CurrentExpense = appData.addExpenses[i].trim();
+              if (CurrentExpense != ""){
+                  //console.log(CurrentExpense[0].toUpperCase())
+                  //CurrentExpense[0] = CurrentExpense[0].toUpperCase();
+                  // JS не позволяет заменить элемент строки =(
 
+                  // A.slice(k, m) - возвращает массив, состоящий из элементов A с k-го по m-ый
+                  CurrentExpense = CurrentExpense[0].toUpperCase() + 
+                                    CurrentExpense.slice(1,CurrentExpense.length);
+              }
+              logStr += CurrentExpense;
+              if (i != appData.addExpenses.length - 1){
+                // Не добавляем разделитель к последнему элеементу
+                logStr += sep;
+              }
+                 console.log('Расходы:'+logStr);*/
 
 
 

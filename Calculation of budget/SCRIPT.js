@@ -28,7 +28,7 @@ let start = document.getElementById('start'),
     additionalExpensesItem = document.querySelector('.additional_expenses-item'),
     incomeItem = document.querySelectorAll('.incom-items'),
     inputText =document.querySelectorAll('type=text');
-            
+     alert("Hi") ;      
   let appData = {
       budget: 0,
       budgetDay: 0,
@@ -36,7 +36,7 @@ let start = document.getElementById('start'),
       income: {},
       incomeMonth: 0,
       addincome: [],
-      expenses: {},
+      expenses: {}
       expensesMonth: 0,
       addExpenses: [],
       deposit: false,
@@ -146,7 +146,7 @@ let start = document.getElementById('start'),
       getAddExpenses: function(){
         let addExpenses = additionalExpensesItem.value.split(',');
         addExpenses.forEach(function(item){
-          item.trim();
+          item item.trim();
           if (item !==''){
             appData.addExpenses.push(item);
           }
