@@ -44,15 +44,16 @@ let start = document.getElementById('start'),
         
        if(salaryAmount.value ==='') {
         start.setAttribute('disabled', 'true');
-       	return;
+        return;
        } 
        let allInput = document.querySelectorAll('.data input[type = text]');
            allInput.forEach(function(itrm) {
-           item.setAttribute('disabled', 'disabled');
+           item.setAttribute('disabled', 'true');
        });
 
-       btnExpAdd.setAttribute('disabled','disabled');
-       bntIncAdd.setAttribute('disabled','disabled');
+       btnExpAdd.setAttribute('disabled','true');
+       bntIncAdd.setAttribute('disabled','true');
+       appData.budget = +salaryAmount.value; 
        start.style.display = 'none';
        cancel.style.display = 'block';           
 
@@ -74,22 +75,24 @@ let start = document.getElementById('start'),
        },
 
 
-   /* blocked: function(){
-	    	document.querySelectorAll('.data input[type=text]').forEach(item => function(){
-	    		item.disabled = true;
-	    	});
-	    	start.style.display = 'none';
-	    	cancel.style.display = '' ;
-	    	start.onclick = appData.blocked;
+     blocked: function(){
+        document.querySelectorAll('.data input[type=text]').forEach(item => function(){
+          item.disabled = true;
+        });
+        start.style.display = 'none';
+        cancel.style.display = '' ;
+        start.onclick = appData.blocked;
     },
     unblocked: function() {
     document.querySelectorAll('.data input[type=text]').forEach(item => function(){
-	    		item.disabled = falsels;
-});
+          item.disabled = falsels;
+     });
+
             start.style.display = '';
-	    	cancel.style.display = 'none';
-	    	cancel.onclick = appData.unblocked;	
-    },*/
+        cancel.style.display = 'none';
+        cancel.onclick = appData.unblocked;
+         
+    },
     
 
     showResult: function(){
@@ -141,11 +144,11 @@ let start = document.getElementById('start'),
           let itemIncome = item.querySelector('.income-title').value;
           let cashIncome = item.querySelector('.income-amount').value;
           if(itemIncome !==''&& cashIncome !=''){
-          	appData.income[itemIncome] = cashIncome;
+            appData.income[itemIncome] = cashIncome;
           }
          });
           for(let key in this.income){
-        	this.incomeMonth += +this.income[key];
+          this.incomeMonth += +this.income[key];
         }
                         
       },
@@ -167,12 +170,7 @@ let start = document.getElementById('start'),
             }
       });
     },
-     getInfoDeposit: function(){
-        if (appData.deposit() = true){
-          appData.percentDeposit = prompt('Какой годовой процент от депозита? ', '10');
-          appData.moneyDeposit = prompt('Сумма депозита?',' 3000');
-        }
-    },                                                        
+                                                        
     getExpensesMonth: function () {
             for (let key in this.addExpenses) {
               this.expensesMonth += +this.expenses[key];
@@ -287,6 +285,7 @@ for (let i = 0; i < appData.addExpenses.legnth; i++){
   let element = appData.addExpenses[i].trim();
   element.charAt(0).toUpperCase() + element.substring(1).toLowerCase();
   addExp.push(element);
-} 
+}
+
 
 
