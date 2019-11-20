@@ -18,6 +18,9 @@ let start = document.getElementById('start'),
     periodAmount = document.querySelector('.period-amount'),
     budgetMonthValue = document.querySelector(".result-budget_month"),
     incomeItems = document.querySelectorAll('.income-items');
+    depositBanck = document.querySelector('.deposit-banck');
+    depositAmount = document.querySelector('.deposit-amount');
+    depositPercent = document.querySelector('.deposit-percent');
  
 
 
@@ -269,6 +272,7 @@ for (let i = 0; i < this.addExpenses.legnth; i++){
 }
 
 }); 
+
  }   
 
 const appData = new AppData();
@@ -278,12 +282,7 @@ console.log(appData);
 
 
 
-let addExp = [];
-for (let i = 0; i < appData.addExpenses.legnth; i++){
-  let element = appData.addExpenses[i].trim();
-  element.charAt(0).toUpperCase() + element.substring(1).toLowerCase();
-  addExp.push(element);
-}
+
 
 
 
