@@ -26,18 +26,18 @@ function countTimer(deadline) {
                 timerSeconds.textContent = timer.seconds;
                 let nulStr = `0`
                  if (+timer.hours < 10){
-                	timerHours.textContent = `${nulStr}, ${timer-hours}`;
+                	timerHours.textContent = `${nulStr}${timer.hours}`;
                 	       }
                  if (+timer.minutes < 10){
-                 	 timerMinutes.textContent = `${nulStr}, ${timer-minutes}`;
+                 	 timerMinutes.textContent = `${nulStr}${timer.minutes}`;
                 	  }
-                 if (+timer.hours < 10){
-                   	 timerSeconds.textContent = `${nulStr}, ${timer-seconds}`;
+                 if (+timer.seconds < 10){
+                   	 timerSeconds.textContent = `${nulStr}${timer.seconds}`;
                       }
                    if(timer.timeRemaining > 0){
                    setTimeout(updateClock, 1000);
                         }
-                   if(timer.timeRemaining < 0){
+                    if(timer.timeRemaining < 0){
                 	clearTimeout();
                  }
                 
@@ -60,6 +60,6 @@ function countTimer(deadline) {
            
            
             //countTimer();
-            countTimer('24 nov 2019');
+            countTimer('23 nov 2019');
 
 });//end
