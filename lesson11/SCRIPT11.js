@@ -27,7 +27,7 @@ let start = document.getElementById('start'),
     depositPercent = document.querySelector('.deposit-percent');
  
 
-
+Class Budget
 
   const AppData = function() {
 
@@ -57,8 +57,8 @@ AppData.prototype.start = function() {
         return;
        } 
        const allInput = document.querySelectorAll('.data input[type = text]');
-           allInput.forEach(function(trim) {
-           item.setAttribute('disabled', 'true');
+             allInput.forEach(function(trim) {
+             item.setAttribute('disabled', 'true');
        });
 
        btnExpAdd.setAttribute('disabled','true');

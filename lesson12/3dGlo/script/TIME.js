@@ -59,7 +59,10 @@ function countTimer(deadline) {
                } 
            
            
-            //countTimer();
-            countTimer('23 nov 2019');
+            countTimer();
+            countTimer('23 dec 2019');
+       
 
 });//end
+    
+
