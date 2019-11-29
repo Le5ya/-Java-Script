@@ -96,7 +96,7 @@ function countTimer(deadline) {
          
             toggleMenu();
 
-            //popup
+            /popup
 
    /* const togglePopUp = () =>{
      const popup = document.querySelector('.popup'),
@@ -128,7 +128,7 @@ function countTimer(deadline) {
                  
   togglePopUp();
 
-// табы
+/// табы
 
 const tabs = () =>{
   const tabHeader = document.querySelector('.service-header'),
@@ -166,7 +166,7 @@ const tabs = () =>{
 };
    tabs();
 
-   //слайдер
+  /* //слайдер
 
    const slider = () =>{
       const slide = document.querySelectorAll('.portfolio-item'),

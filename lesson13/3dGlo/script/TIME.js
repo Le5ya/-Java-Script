@@ -96,7 +96,7 @@ function countTimer(deadline) {
          
             toggleMenu();
 
-            //popup
+            /popup
 
    /* const togglePopUp = () =>{
      const popup = document.querySelector('.popup'),
@@ -128,7 +128,7 @@ function countTimer(deadline) {
                  
   togglePopUp();
 
-// табы
+/*// табы
 
 const tabs = () =>{
   const tabHeader = document.querySelector('.service-header'),
