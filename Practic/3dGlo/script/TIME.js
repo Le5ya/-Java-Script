@@ -82,23 +82,22 @@ function countTimer(deadline) {
 
                    btnMenu.addEventListener('click', handlerMenu);
 
-                   closeBtn.addEventListener("click",handlerMenu); 
-                   menuItems.forEach((elem) => elem.addEventListener('click', handlerMenu));
-                   //elem.addEvent listener('click',()=>{
-                   //let menu = event.target.closest('menu');
-                   //if(!menu) return;
-                   //if(!event.target.contains(menu)) return;
-                  // });
-                   //        
-                    
-                          
-               };//end toggleMenu                    
+                   //closeBtn.addEventListener("click",handlerMenu); 
+                   //menuItems.forEach((elem) => elem.addEventListener('click', handlerMenu));
+                   
+                   menu.addEventListener("click", ()=>{
+                    if (!(menu === event.target)){
+                      handlerMenu() 
+                    }                                       
+                   }); 
+                                
+                  } ; //end toggleMenu 
          
             toggleMenu();
 
-            /popup
+            //popup
 
-   /* const togglePopUp = () =>{
+     const togglePopUp = () =>{
      const popup = document.querySelector('.popup'),
       popupBtn = document.querySelectorAll('.popup-btn');
       

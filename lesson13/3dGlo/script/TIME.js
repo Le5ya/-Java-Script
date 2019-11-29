@@ -96,9 +96,9 @@ function countTimer(deadline) {
          
             toggleMenu();
 
-            /popup
+            //popup
 
-   /* const togglePopUp = () =>{
+     const togglePopUp = () =>{
      const popup = document.querySelector('.popup'),
       popupBtn = document.querySelectorAll('.popup-btn');
       
@@ -128,7 +128,7 @@ function countTimer(deadline) {
                  
   togglePopUp();
 
-/*// табы
+// табы
 
 const tabs = () =>{
   const tabHeader = document.querySelector('.service-header'),
@@ -259,7 +259,7 @@ const tabs = () =>{
 
    slider();
 
-       });//end*/
+       });//end
 
     
 
