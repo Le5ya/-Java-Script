@@ -1,0 +1,17 @@
+{
+  "name": "3dglo",
+  "version": "1.0.0",
+  
+  "scripts": {
+    "watch": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "lilia",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "D": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
