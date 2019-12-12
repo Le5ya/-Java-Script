@@ -39,9 +39,7 @@ function countTimer(deadline) {
                         }
                     if(timer.timeRemaining < 0){
                   clearTimeout();
-                 }
-                
-                  
+                 }                                  
                }
 
                 //-1
