@@ -47,7 +47,7 @@ function countTimer(deadline) {
               if(+timer.hours % 24 === 0){
                 console.log('Сутки!');
               
-              if(clearTimeout() = true){
+              if(clearTimeout() == true){
                 clearInterval(idInterval);
               }
             }
